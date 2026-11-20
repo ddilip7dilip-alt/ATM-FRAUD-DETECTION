@@ -109,7 +109,7 @@ if uploaded_file is not None:
 
         st.write("### Detailed Predictions")
         fraud_df = df[df['Prediction'] == 1]
-        st.dataframe(df.head(1000).style.applymap(highlight_fraud, subset=['Prediction']),use_container_width=True)
+        st.dataframe(df.head(1000).style.map(highlight_fraud, subset=['Prediction']),use_container_width=True)
 
 
         # Download Result
